@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+/* app/assets/stylesheets/application.css または別のCSSファイルに記述 */
+
+/* ヘッダー */
+
+.site-header {
+  width: 100%;
+  background: #333; /* 背景色 */
+  color: white; /* 文字色 */
+}
+
+.header-wrapper {
+  max-width: 1200px; /* 最大幅を設定 */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 10px; /* パディング */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: space-between; /* 要素を両端に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.logo {
+  font-size: 1.5em; /* ロゴのフォントサイズ */
+}
+
+.main-nav ul {
+  list-style: none; /* リストのスタイルをなしに */
+  display: flex; /* フレックスボックスを使用 */
+  padding: 0; /* パディングなし */
+  margin: 0; /* マージンをリセット */
+  
+}
+
+.main-nav ul li {
+  margin-left: 20px; /* リストアイテムの間隔 */
+}
+
+.main-nav ul li a {
+  color: white; /* リンクの色 */
+  text-decoration: none; /* 下線をなしに */
+}
+
+/* エラーメッセージを横いっぱいに表示するスタイル */
+/* エラーメッセージを横いっぱいに表示するスタイル */
+.alert {
+  width: 100%;
+  margin: 0;
+  border-radius: 0; /* 角丸をなくす場合 */
+  /* その他のスタイリング */
+}
+
+

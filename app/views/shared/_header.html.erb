@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="header-wrapper">
+    <div class="logo">
+      <%= link_to "I'm full", root_path %>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <% if user_signed_in? %>
+          <% unless controller_name == 'registrations' && action_name == 'edit' %>
+            <li><%= link_to 'プロフィール編集', edit_user_registration_path %></li>
+          <% end %> 
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <!-- トップページでサインアップとログインボタンがある場合、これらは削除しても良い -->
+        <% end %>
+        <!-- その他のリンク -->
+      </ul>
+    </nav>
+  </div>
+</header>
+

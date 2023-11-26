@@ -8,6 +8,18 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+// jQueryをインポートしてグローバル変数に割り当てる 11/1追記
+import jQuery from "jquery"
+global.$ = global.jQuery = jQuery
+
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+
+import 'bootstrap'
+import 'bootstrap/dist/js/bootstrap'
+// # 先に作成したapplication.scssも読み込む
+import '../stylesheets/application.scss';

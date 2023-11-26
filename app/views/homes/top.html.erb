@@ -1,2 +1,15 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+<!-- トップページのビュー（例: app/views/home/index.html.erb） -->
+
+<div class="container mt-5">
+  <div class="text-center">
+    <h1>I’m full</h1>
+      <% if user_signed_in? %>
+        <h2>ようこそ、<%= current_user.name %> さん！</h2>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'btn btn-info' %>
+      <% else %>
+        <h2>ようこそ！</h2>
+        <%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary' %>
+        <%= link_to 'サインアップ', new_user_registration_path, class: 'btn btn-secondary' %>
+      <% end %>
+  </div>
+</div>
