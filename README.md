@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 <!-- !-- 12/16 node  -v20.10.0 -- -->
+<!-- 12/16 RAILS_ENV=production bin/webpack -->
