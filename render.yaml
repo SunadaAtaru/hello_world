@@ -3,12 +3,14 @@ databases:
     databaseName: hello_world
     user: hello_world
     region: singapore
+    plan: starter #確認用にfreeで
 
 services:
   - type: web
     name: hello_world
     env: ruby
     region: singapore
+    plan: stater #確認用にfreeで
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
