@@ -84,15 +84,7 @@ test:
 #   database: hello_world_production
 #   username: hello_world
 #   password: <%= ENV['HELLO_WORLD_DATABASE_PASSWORD'] %>
-# production:
-#   <<: *default
-#   url: <%= ENV['DATABASE_URL'] %>
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: dpg-cltgml0l5elc73dou7ng-a
-  port: 5432
-  username: hello_world
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  database: hello_world_zzop
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+

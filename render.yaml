@@ -1,22 +1,22 @@
 databases:
-  - name: hello_world
-    databaseName: hello_world
+  - name: hello_world_DB
+    databaseName: hello_world_db_dd5d
     user: hello_world
-    region: singapore
-    plan: starter #確認用にfreeで
+    region: oregon
+    plan: starter #確認用にfreeで12/22追記
 
 services:
   - type: web
     name: hello_world
     env: ruby
-    region: singapore
-    plan: stater #確認用にfreeで
+    region: oregon
+    plan: stater #確認用にfreeで12/22追記
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: hello_world 
+          name: hello_world_DB
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
