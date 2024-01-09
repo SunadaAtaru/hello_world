@@ -34,6 +34,9 @@
   align-items: center; /* 縦方向の中央揃え */
 }
 
+
+
+
 .logo {
   font-size: 1.5em; /* ロゴのフォントサイズ */
 }
@@ -57,11 +60,43 @@
 
 /* エラーメッセージを横いっぱいに表示するスタイル */
 /* エラーメッセージを横いっぱいに表示するスタイル */
-.alert {
+// .alert {
+//   width: 100%;
+//   margin: 0;
+//   border-radius: 0; /* 角丸をなくす場合 */
+//   /* その他のスタイリング */
+// }
+#explanation {
   width: 100%;
-  margin: 0;
-  border-radius: 0; /* 角丸をなくす場合 */
-  /* その他のスタイリング */
+  margin: 10px 0; /* 上下のマージン */
+  padding: 15px; /* 内側のパディング */
+  font-size: 16px; /* フォントサイズ */
+  color: #333; /* テキストの色 */
+  font-family: Arial, sans-serif; /* フォントファミリー */
+  border: 1px solid #ebccd1; /* 境界線 */
+  border-radius: 4px; /* 角の丸み */
+  text-align: center; /* テキストを中央揃えにする */
+
 }
 
 
+/* フラッシュメッセージとエラーメッセージの共通スタイル */
+.alert {
+  width: 100%; /* 画面幅いっぱいに広がるように設定 */
+  padding: 15px; /* パディングを適用 */
+  margin-bottom: 20px; /* 下部のマージンを設定 */
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
